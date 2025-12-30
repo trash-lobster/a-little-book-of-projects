@@ -113,14 +113,6 @@ aside {
   }
 }
 
-.button-active {
-  background-color: rgb(204, 255, 238);
-  
-  &:hover {
-    transform: translateY(0px);
-  }
-}
-
 #navbar {
   font-family: "AdvercaseFont", Arial, sans-serif;
   width: 100%;
@@ -140,4 +132,67 @@ aside {
   box-sizing: border-box;
   padding: 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+
+/* Home page */
+/* Full-height card stack for the Home intro */
+.cards {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  scroll-snap-align: start;
+  min-height: 100%; /* match container height */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+  width: 100%;
+  transition: transform 420ms cubic-bezier(.2,.9,.2,1), opacity 420ms ease;
+  opacity: 0.0;
+  transform: translateY(12px);
+}
+
+.card.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card, .card.in-view {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .cards { scroll-behavior: auto; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: reveal 480ms cubic-bezier(.2,.9,.2,1) forwards;
+  animation-delay: 480ms;
+  height: 100%;
+  overflow: scroll;
+}
+
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.intro-text {
+  font-family: "AdvercaseFont", Arial, sans-serif;
+  font-size: 36px;
+  text-wrap: stable;
 }

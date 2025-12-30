@@ -81,6 +81,7 @@ export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage
                             calculate();
                             setPage('projects');
                         }}
+                        disabled={page === 'projects'}
                         className={isProjectActive ? 'button-active nav-button' : 'nav-button'}
                     >
                         Projects.
