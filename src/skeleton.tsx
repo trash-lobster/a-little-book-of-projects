@@ -12,7 +12,7 @@ export function Skeleton() {
         <>
             <nav id='navbar'>
                 <h1>A Little Book of Projects</h1>
-                <div>A Portolio Site of Random Things<br/>By Vincent Sit</div>
+                <div>A Portolio Site of Random Things<br/>By Vincent</div>
             </nav>
             <svg width="100%" height="14">
                 <defs>
