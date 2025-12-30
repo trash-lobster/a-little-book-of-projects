@@ -1,16 +1,24 @@
 import { useLayoutEffect, useRef, useState, type Dispatch } from "react";
 import { ProjectOption } from "./project-option";
-import type { Page } from "../../skeleton";
+import type { Page, Projects } from "../../skeleton";
 
 interface NavbarProps {
     isProjectActive: boolean;
     onToggleProject: () => void;
     closeProject: () => void;
     setPage: Dispatch<React.SetStateAction<Page>>;
+    setProject: Dispatch<React.SetStateAction<Projects>>;
     page: string;
 }
 
-export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage, page }: NavbarProps) {
+export function Navbar({ 
+    isProjectActive, 
+    onToggleProject, 
+    closeProject, 
+    setPage, 
+    setProject,
+    page
+}: NavbarProps) {
     const [containerWidth, setContainerWidth] = useState(0);
 
     const projectContainerRef = useRef<HTMLDivElement | null>(null);
@@ -57,6 +65,7 @@ export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage
                     className="nav-button"
                     onClick={() => {
                         setPage('home');
+                        setProject('home');
                         closeProject();
                     }}
                     disabled={page === 'home'}
@@ -67,6 +76,7 @@ export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage
                     className="nav-button"
                     onClick={() => {
                         setPage('about');
+                        setProject('home');
                         closeProject();
                     }}
                     disabled={page === 'about'}
@@ -79,6 +89,7 @@ export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage
                         onClick={() => {
                             onToggleProject();
                             calculate();
+                            setProject('home');
                             setPage('projects');
                         }}
                         disabled={page === 'projects'}
@@ -89,7 +100,7 @@ export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage
                     {
                         isProjectActive && (
                             <div id='projects' ref={projectContainerRef}>
-                                <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Custom Infinite Canvas'/>
+                                <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Reffy Infinite Canvas'/>
                                 <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Reffy Web Extension'/>
                                 <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Pixel Lobster'/>
                                 <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Time Wizard'/>
@@ -101,6 +112,7 @@ export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage
                     className="nav-button"
                     onClick={() => {
                         setPage('contact');
+                        setProject('home');
                         closeProject();
                     }}
                     disabled={page === 'contact'}

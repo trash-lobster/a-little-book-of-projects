@@ -6,10 +6,12 @@ import { ContactPage } from './page/contact';
 import { ProjectsPage } from './page/projects';
 
 export type Page = 'home' | 'projects' | 'about' | 'contact';
+export type Projects = 'home' | 'infinite-canvas' | 'web-extension' | 'pixel' | 'wizard';
 
 export function Skeleton() {
     const [isProjectActive, setIsProjectActive] = useState(false);
     const [currPage, setCurrPage] = useState<Page>('home');
+    const [project, setProject] = useState<Projects>('home');
     
     return (
         <>
@@ -31,6 +33,7 @@ export function Skeleton() {
                     onToggleProject={() => setIsProjectActive(!isProjectActive)}
                     closeProject={() => setIsProjectActive(false)}
                     setPage={setCurrPage}
+                    setProject={setProject}
                     page={currPage}
                 />
                 <div id='content'>
@@ -42,7 +45,7 @@ export function Skeleton() {
                                 : currPage === 'contact'
                                     ? <ContactPage/>
                                     : currPage === 'projects'
-                                        ? <ProjectsPage/>
+                                        ? <ProjectsPage project={project} setProject={setProject}/>
                                         : <div/>
                     }
                 </div>

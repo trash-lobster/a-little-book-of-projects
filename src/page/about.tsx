@@ -17,13 +17,34 @@ export function AboutPage() {
                 <ul>
                     <li>
                         <span>Graduated from university with a degree in Law (Hons) and Accounting</span>
+                        <span className="dotted-line"></span>
                         <span>2020</span>
                     </li>
-                    <li><span>Started my first full time position</span><span>2021</span></li>
-                    <li><span>Got my first role as a developer</span><span>2023</span></li>
-                    <li><span>Participated in my first Game Jame</span><span>2024</span></li>
-                    <li><span>Published my first package as part of a personal project</span><span>2025</span></li>
-                    <li><span>Submitted my first web extension to FireFox and Chrome (status: pending)</span><span>2025</span></li>
+                    <li>
+                        <span>Started my first full time position</span>
+                        <span className="dotted-line"></span>
+                        <span>2021</span>
+                    </li>
+                    <li>
+                        <span>Got my first role as a software developer</span>
+                        <span className="dotted-line"></span>
+                        <span>2023</span>
+                    </li>
+                    <li>
+                        <span>Participated in my first Game Jam</span>
+                        <span className="dotted-line"></span>
+                        <span>2024</span>
+                    </li>
+                    <li>
+                        <span>Published my first package as part of a personal project</span>
+                        <span className="dotted-line"></span>
+                        <span>2025</span>
+                    </li>
+                    <li>
+                        <span>Submitted my first web extension to FireFox and Chrome (status: pending)</span>
+                        <span className="dotted-line"></span>
+                        <span>2025</span>
+                    </li>
                 </ul>
             </div>
             <div>

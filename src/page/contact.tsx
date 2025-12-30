@@ -2,7 +2,7 @@ export function ContactPage() {
     return (
         <div id='contact-page'>
             <div>
-                Reach out to me through any of the following!
+                Reach out to me if you want to chat!
                 <div id='contact-list'>
                     <a href='https://github.com/trash-lobster' target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
