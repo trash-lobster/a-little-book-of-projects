@@ -38,7 +38,6 @@ export function Navbar({ isProjectActive, onToggle }: NavbarProps) {
 
         window.addEventListener('resize', handle);
 
-        // initial measurement (layout effect runs after DOM mutations)
         handle();
 
         return () => {

@@ -7,6 +7,8 @@ interface ProjectOptionProps {
     isProjectActive: boolean;
 }
 
+const PADDING_OFFSET = 10;
+
 export function ProjectOption({ w: containerWidth, text, isProjectActive }: ProjectOptionProps) {
     const projectRef = useRef<HTMLSpanElement | null>(null);
     const [width, setWidth] = useState(0);
@@ -20,7 +22,7 @@ export function ProjectOption({ w: containerWidth, text, isProjectActive }: Proj
             const compute = (s: HTMLSpanElement | null) => {
                 if (!s) return 0;
                 const w = s.getBoundingClientRect().width;
-                return Math.max(0, Math.floor(containerWidth - w - 10));
+                return Math.max(0, Math.floor(containerWidth - w - PADDING_OFFSET));
             };
 
             if (span) {
@@ -46,7 +48,6 @@ export function ProjectOption({ w: containerWidth, text, isProjectActive }: Proj
 
         window.addEventListener('resize', handle);
 
-        // initial measurement
         handle();
 
         return () => {
