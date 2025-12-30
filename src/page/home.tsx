@@ -13,7 +13,7 @@ export function HomePage() {
         <div>
             I'm <span className='home-name' style={{color: 'red'}}>Vincent</span>.
             <br />A developer with a passion for front-end.
-            <br />I enjoy most forms of creative work, be it <span style={{color: 'green'}}>art</span>, <span style={{color: 'blue'}}>animation</span> or <span style={{color: 'purple'}}>writing</span>.
+            <br />I enjoy most forms of creative work, be it <u>art</u>, <u>animation</u> or <u>writing</u>.
         </div>,
         <div>
             I may have started late but let's fill the project page up!

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Navbar } from './component/navbar/navbar';
 import { HomePage } from './page/home';
+import { AboutPage } from './page/about';
+import { ContactPage } from './page/contact';
 
 export type Page = 'home' | 'projects' | 'about' | 'contact';
 
@@ -34,7 +36,11 @@ export function Skeleton() {
                     {
                         currPage === 'home'
                             ? <HomePage/>
-                            : <div/>
+                            : currPage === 'about'
+                                ? <AboutPage/>
+                                : currPage === 'contact'
+                                    ? <ContactPage/>
+                                    : <div/>
                     }
                 </div>
             </main>
