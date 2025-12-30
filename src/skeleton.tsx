@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { Navbar } from './component/navbar/navbar';
+import { HomePage } from './page/home';
+
+export type Page = 'home' | 'projects' | 'about' | 'contact';
 
 export function Skeleton() {
     const [isProjectActive, setIsProjectActive] = useState(false);
+    const [currPage, setCurrPage] = useState<Page>('home');
     
     return (
         <>
@@ -19,9 +23,19 @@ export function Skeleton() {
                 <rect id="background-rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern1)"></rect>
             </svg>
             <main id='main-body'>
-                <Navbar isProjectActive={isProjectActive} onToggle={() => setIsProjectActive(!isProjectActive)} />
+                <Navbar 
+                    isProjectActive={isProjectActive} 
+                    onToggleProject={() => setIsProjectActive(!isProjectActive)}
+                    closeProject={() => setIsProjectActive(false)}
+                    setPage={setCurrPage}
+                    page={currPage}
+                />
                 <div id='content'>
-                    I like making things. Finishing things is also incredibly difficult. So... it's worth the time to record the wins! 
+                    {
+                        currPage === 'home'
+                            ? <HomePage/>
+                            : <div/>
+                    }
                 </div>
             </main>
         </>

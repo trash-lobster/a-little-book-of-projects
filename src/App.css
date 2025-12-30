@@ -81,6 +81,7 @@ aside {
   flex-direction: column;
   gap: 0.5rem;
   margin-top: 0.5rem;
+  transition: all ease-in-out 0.5s;
 }
 
 .aside-border {
@@ -96,6 +97,20 @@ aside {
 
 #projects div:hover {
   color: rgb(113, 113, 113);
+}
+
+.nav-button {
+  background-color: white;
+}
+
+.nav-button:disabled {
+  filter: brightness(90%);
+  cursor: default;
+
+  &:hover {
+    transform: translateY(0px);
+    background-color: white;
+  }
 }
 
 .button-active {

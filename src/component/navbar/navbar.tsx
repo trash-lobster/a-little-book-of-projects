@@ -1,12 +1,16 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, type Dispatch } from "react";
 import { ProjectOption } from "./project-option";
+import type { Page } from "../../skeleton";
 
 interface NavbarProps {
     isProjectActive: boolean;
-    onToggle: () => void;
+    onToggleProject: () => void;
+    closeProject: () => void;
+    setPage: Dispatch<React.SetStateAction<Page>>;
+    page: string;
 }
 
-export function Navbar({ isProjectActive, onToggle }: NavbarProps) {
+export function Navbar({ isProjectActive, onToggleProject, closeProject, setPage, page }: NavbarProps) {
     const [containerWidth, setContainerWidth] = useState(0);
 
     const projectContainerRef = useRef<HTMLDivElement | null>(null);
@@ -49,15 +53,35 @@ export function Navbar({ isProjectActive, onToggle }: NavbarProps) {
     return (
         <aside>
             <ul>
-                <button>About.</button>
+                <button 
+                    className="nav-button"
+                    onClick={() => {
+                        setPage('home');
+                        closeProject();
+                    }}
+                    disabled={page === 'home'}
+                >
+                    Home.
+                </button>
+                <button 
+                    className="nav-button"
+                    onClick={() => {
+                        setPage('about');
+                        closeProject();
+                    }}
+                    disabled={page === 'about'}
+                >
+                    About.
+                </button>
                 <div>
                     <button
                         id='project-button'
                         onClick={() => {
-                            onToggle();
+                            onToggleProject();
                             calculate();
+                            setPage('projects');
                         }}
-                        className={isProjectActive ? 'button-active' : ''}
+                        className={isProjectActive ? 'button-active nav-button' : 'nav-button'}
                     >
                         Projects.
                     </button>
@@ -72,7 +96,16 @@ export function Navbar({ isProjectActive, onToggle }: NavbarProps) {
                         )
                     }
                 </div>
-                <button>Contact.</button>
+                <button
+                    className="nav-button"
+                    onClick={() => {
+                        setPage('contact');
+                        closeProject();
+                    }}
+                    disabled={page === 'contact'}
+                >
+                    Contact.
+                </button>
             </ul>
         </aside>
     )
