@@ -3,6 +3,7 @@ import { Navbar } from './component/navbar/navbar';
 import { HomePage } from './page/home';
 import { AboutPage } from './page/about';
 import { ContactPage } from './page/contact';
+import { ProjectsPage } from './page/projects';
 
 export type Page = 'home' | 'projects' | 'about' | 'contact';
 
@@ -40,7 +41,9 @@ export function Skeleton() {
                                 ? <AboutPage/>
                                 : currPage === 'contact'
                                     ? <ContactPage/>
-                                    : <div/>
+                                    : currPage === 'projects'
+                                        ? <ProjectsPage/>
+                                        : <div/>
                     }
                 </div>
             </main>

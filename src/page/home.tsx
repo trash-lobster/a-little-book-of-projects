@@ -1,14 +1,14 @@
 import { useEffect, useRef } from 'react';
-import image from '../assets/Coffee_call.svg';
+// import image from '../assets/Coffee_call.svg';
 
 export function HomePage() {
     const items = [
         <div style={{display: 'flex', flexDirection: 'column'}}>
-            <img src={image} alt='man walking with coffee' style={{aspectRatio: 1, height: '25rem'}}/>
+            {/* <img src={image} alt='man walking with coffee' style={{aspectRatio: 1, height: '25rem'}}/> */}
             It took a long time before I realised this about myself...
         </div>,
         <div>
-            I like making things.<br/>But finishing things is also incredibly difficult.<br/>So... let's record some projects!
+            I like making things.<br/>But finishing things is also incredibly difficult.<br/>So... We should celebrate when we do finish one!
         </div>,
         <div>
             I'm <span className='home-name' style={{color: 'red'}}>Vincent</span>.

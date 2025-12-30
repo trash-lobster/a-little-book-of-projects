@@ -175,6 +175,10 @@ aside {
 .card.in-view {
   opacity: 1;
   transform: none;
+
+  div {
+    transform: translateY(-50%);
+  }
 }
 
 .reveal {
@@ -222,6 +226,7 @@ aside {
 
 /* Apply grid layout only when the list item contains two adjacent spans (text + year) */
 #about-page ul li:has(span + span) {
+  width: 95%;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
