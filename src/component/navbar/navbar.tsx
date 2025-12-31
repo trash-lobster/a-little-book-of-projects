@@ -17,7 +17,7 @@ export function Navbar({
     closeProject, 
     setPage, 
     setProject,
-    page
+    page,
 }: NavbarProps) {
     const [containerWidth, setContainerWidth] = useState(0);
 
@@ -100,10 +100,10 @@ export function Navbar({
                     {
                         isProjectActive && (
                             <div id='projects' ref={projectContainerRef}>
-                                <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Reffy Infinite Canvas'/>
-                                <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Reffy Web Extension'/>
-                                <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Pixel Lobster'/>
-                                <ProjectOption isProjectActive={isProjectActive} w={containerWidth} text='Time Wizard'/>
+                                <ProjectOption setProject={() => setProject('infinite-canvas')} isProjectActive={isProjectActive} w={containerWidth} text='Reffy Infinite Canvas'/>
+                                <ProjectOption setProject={() => setProject('web-extension')} isProjectActive={isProjectActive} w={containerWidth} text='Reffy Web Extension'/>
+                                <ProjectOption setProject={() => setProject('pixel')} isProjectActive={isProjectActive} w={containerWidth} text='Pixel Lobster'/>
+                                <ProjectOption setProject={() => setProject('wizard')} isProjectActive={isProjectActive} w={containerWidth} text='Time Wizard'/>
                             </div>
                         )
                     }

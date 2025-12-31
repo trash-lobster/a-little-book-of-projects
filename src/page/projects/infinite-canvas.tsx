@@ -82,18 +82,17 @@ export function InfiniteCanvasPage({ toHome } : PageProps) {
                     }}
                 />
             </div>
-            <div className='cormorant-garamond'><i>It was a dare.</i></div>
             <article className='cormorant-garamond'>
-                <h3>Skip this part if you want to get to the technical details</h3>
+                <span>Dec 31, 2025</span>
                 <p>This really is the unplanned sibling of Reffy Web Extension.</p>
                 <p>I originally intended to rely purely on <a>Excalidraw</a>. It's a great piece of software. Why should I go and reinvent the wheel when the wheel is free and rolling?</p>
                 <p>But I do know why I should not. It would take a lot of time. It would delay my self-imposed delivery of Reffy. Heck, it took half a year instead of 1 month because of this.</p>
-                <p>I tried to convince myself that Excalidraw is not an overkill for a pure-image rendering canvas. I tried to convince myself that I would be a fool to write this by myself in an age of fast-delivery, build and sell software landscape.</p> 
+                <p>I tried to convince myself that Excalidraw is not an overkill for a pure-image rendering canvas. I tried to convince myself that I would be a fool to write this by myself in an age of fast-delivery, build and sell.</p> 
                 <p><b>Worst of all, I was convinced that I couldn't do it.</b></p>
                 <p>I get anxious, because I've long forgot how to push past my own comfort zone. I forgot that Rome wasn't build in a day. I didn't believe that I can build anything worthwhile on my own.</p>
                 <p>But in 2025, after my friend's wedding and a year of emotional turmoil, I realised that there's a beauty in trying. So I rolled my sleeves and tried to write as much of the infinite canvas myself.</p>
                 <p>Sure, there are tools these days that can expedite any projects. I use them, but I'm proud to say that an overwhelming of the thinking was still done by me. It may not be something that everyone gets, but I do love the joy from looking back at some job well done.</p>
-                <p>Of course, is my code base perfect? Far from it (there are still bugs that I need to figure out right now). But boy, did I learn a lot. Instead of harping on about wanting to start learning graphics programming, I managed to try out using WebGL for the first time in my life (and did well enough to be where we are now).</p>
+                <p>Instead of harping on about wanting to start learning graphics programming, I managed to try out using WebGL for the first time in my life (and did well enough to be where we are now).</p>
                 <p>I wrote my first custom element and published my first package this year. Crucially, I gained confidence in myself to make more things in the future. Thanks Reffy.</p>
                 <span className="dotted-line"></span>
                 <h3>Wait, don't gloss over the Excalidraw stuff. Why aren't you using it?</h3>
@@ -153,6 +152,8 @@ export function InfiniteCanvasPage({ toHome } : PageProps) {
                 <span className="dotted-line"></span>
                 <h3>Check out these resources!</h3>
                 <ul>
+                    <li><a href='https://github.com/trash-lobster/reffy-infinite-canvas' target="_blank" rel="noopener noreferrer">GitHub Repo for Reffy Infinite Canvas</a></li>
+                    <li><a href='https://www.npmjs.com/package/@reffy/infinite-canvas' target="_blank" rel="noopener noreferrer">NPM - Reffy Infinite Canvas</a></li>
                     <li><a href='https://excalidraw.com/' target="_blank" rel="noopener noreferrer">Excalidraw</a></li>
                     <li><a href='https://infinitecanvas.cc/' target="_blank" rel="noopener noreferrer">An infinite canvas tutorial</a></li>
                     <li><a href='https://webglfundamentals.org/' target="_blank" rel="noopener noreferrer">WebGL Fundamentals</a></li>

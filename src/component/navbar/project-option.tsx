@@ -5,11 +5,12 @@ interface ProjectOptionProps {
     w: number;
     text: string;
     isProjectActive: boolean;
+    setProject: () => void;
 }
 
 const PADDING_OFFSET = 10;
 
-export function ProjectOption({ w: containerWidth, text, isProjectActive }: ProjectOptionProps) {
+export function ProjectOption({ w: containerWidth, text, isProjectActive, setProject }: ProjectOptionProps) {
     const projectRef = useRef<HTMLSpanElement | null>(null);
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -57,9 +58,10 @@ export function ProjectOption({ w: containerWidth, text, isProjectActive }: Proj
     }, [isProjectActive, containerWidth]);
 
     return (
-        <div>
+        <div onClick={setProject}>
             <TreeBranch isHovered={isHovered} width={width} height={height}/>
             <span 
+                className="cormorant-garamond"
                 ref={projectRef} 
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}

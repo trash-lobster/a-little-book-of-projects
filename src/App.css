@@ -297,7 +297,7 @@ aside {
 
 #project-main {
   font-family: "AdvercaseFont", Arial, sans-serif;
-  width: 100%;
+  width: 70%;
   position: relative;
 }
 
@@ -367,6 +367,7 @@ aside {
 
 /* Project pages */
 .project-home-button {
+  font-family: "AdvercaseFont", Arial, sans-serif;
   position: fixed;
   top: 9rem;
   right: 15rem;
@@ -375,23 +376,12 @@ aside {
   justify-content: center;
   padding: 8px;
   gap: 1rem;
-  border: 1px black #57606a;
+  border: 2px black solid;
   border-radius: 8px;
-  color: #57606a;
   text-decoration: none;
   background: #ffffff;
   cursor: pointer;
   z-index: 2;
-  font:
-      500 16px system-ui,
-      -apple-system,
-      Segoe UI,
-      Roboto,
-      Ubuntu,
-      Cantarell,
-      'Noto Sans',
-      'Helvetica Neue',
-      Arial;
 }
 
 #infinite-canvas-page {
@@ -414,6 +404,7 @@ aside {
   margin-top: 1rem;
   text-align: start;
   width: 700px;
+  font-size: 20px;
 }
 
 #infinite-canvas-page .cormorant-garamond {

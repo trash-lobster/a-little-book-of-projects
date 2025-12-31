@@ -11,13 +11,12 @@ export function ProjectHome({
     return (
         <div id='project-main'>
             <h1>Menu</h1>
-            <p>Pick from a delectable selection of projects, each crafted at a different time of my career.</p>
-            <p>Just as fun as it is to make them, it's equally entertaining to look back and see how much I've learned and changed.</p>
+            <p>Pick from a delectable selection of projects, each crafted to the best of my ability at the time.</p>
             <ul>
                 <li onClick={() => setPage('infinite-canvas')}>
                     <span>Reffy Infinite Canvas</span>
                     <span className="dotted-line"></span>
-                    <span className='cormorant-garamond'>An in-house crafted infinite canvas that is light on the tongue and served fast.</span>
+                    <span className='cormorant-garamond'>An in-house brewed infinite canvas that is light on the tongue and served fast.</span>
                 </li>
                 <li onClick={() => setPage('web-extension')}>
                     <span>Reffy Web Extension</span>
