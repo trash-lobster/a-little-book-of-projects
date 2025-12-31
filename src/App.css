@@ -420,6 +420,34 @@ aside {
   width: 700px;  
 }
 
+#infinite-canvas-page ul li:has(span + span) {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+#infinite-canvas-page ul li span:first-child {
+  grid-column: 1;
+  white-space: nowrap;
+}
+
+#infinite-canvas-page ul li span:last-child {
+  font-weight: 100;
+  grid-column: 3;
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+/* dotted leader only for items with two spans */
+#infinite-canvas-page ul li:has(span + span)::before {
+  content: "";
+  grid-column: 2;
+  height: 5px;
+}
+
 #add-image-button {
   position: absolute;
   top: 1rem;

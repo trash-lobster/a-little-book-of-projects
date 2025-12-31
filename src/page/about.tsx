@@ -1,18 +1,26 @@
 export function AboutPage() {
     return (
-        <div id='about-page'>
-            <div>                
-                I am a developer from New Zealand who began his journey during the COVID pandemic. With so much time on my hands, it made sense at the time to challenge myself.
-                <br/><br/>
-                What I found was a never-ending hill. Everytime I pulled myself forward, I find new heights to conquer. Every project I work on, I find new things that I've never considered before.
-                <br/><br/>
-                I was enamored with the challenge and growing up an internet kid that drew a lot, it was almost predetermined that I would fall into the path of front-end development.
-                <br/><br/>
-                Am I competent yet? Maybe. Is there a lot more to learn? Absolutely. And the only way forward is one step at a time.
-                <br/><br/>
-                Lived another life studying and working in the field of Legal Studies and Taxation. I have been admitted to the bar in NZ.
-            </div>
-            <div>
+        <div id='infinite-canvas-page'>
+            <article className='cormorant-garamond'>
+                <p>                
+                    I am a developer from New Zealand who began his journey during the COVID pandemic. With so much time on my hands, it made sense at the time to challenge myself.
+                </p>
+                <p>
+                    What I found was a never-ending hill. Everytime I pulled myself forward, I find new heights to conquer. Every project I work on, I find new things that I've never considered before.
+                </p>
+                <p>
+                    I was enamored with the challenge and growing up an internet kid that drew a lot, it was almost predetermined that I would fall into the path of front-end development.
+                </p>
+                <span className="dotted-line"></span>
+                <h3>Tech Stack</h3>
+                <ul>
+                    <li>Experienced in front-end development with JavaScript and TypeScript. The framework I'm most familiar with is React.</li>
+                    <li>C# and .Net Core for back-end applications</li>
+                    <li>Version control system: Git (I have experience with TFS but I will not answer your call if that's what you're ringing about)</li>
+                    <li>Currently planning on learning a lower level language, debating between C, Rust and Odin at the moment.</li>
+                    <li>As a result of a few game jams, I'm also familiar with Godot and Unity.</li>
+                </ul>
+                <span className="dotted-line"></span>
                 <h3>Milestone</h3>
                 <ul>
                     <li>
@@ -46,25 +54,7 @@ export function AboutPage() {
                         <span>2025</span>
                     </li>
                 </ul>
-            </div>
-            <div>
-                <h3>Tech Stack</h3>
-                <ul>
-                    <li>Experienced in front-end development with JavaScript and TypeScript. The framework I'm most familiar with is React.</li>
-                    <li>C# and .Net Core for back-end applications</li>
-                    <li>Version control system: Git (I have experience with TFS but I will not answer your call if that's what you're ringing about)</li>
-                    <li>Currently planning on learning a lower level language, debating between C, Rust and Odin at the moment.</li>
-                    <li>As a result of a few game jams, I'm also familiar with Godot and Unity.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>All Time Favorites</h3>
-                <ul>
-                    <li>Games: Dispatch, Hades (1 and 2) and Gris</li>
-                    <li>Films: The Prestige</li>
-                    <li>Shows: The Good Place</li>
-                </ul>
-            </div>
+            </article>
         </div>
     )
 }
