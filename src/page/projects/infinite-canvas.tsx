@@ -1,7 +1,7 @@
 import { useRef, useState, } from "react";
 import { InfiniteCanvas } from "../../component/canvas/canvas";
-import type { InfiniteCanvasElement } from "../../../../reffy/new-infinite-canvas/dist/Component";
 import { useInfiniteCanvas } from "../../hooks/useInfiniteCanvas";
+import type { InfiniteCanvasElement } from "@reffy/infinite-canvas";
 
 interface PageProps {
     toHome: () => void;
