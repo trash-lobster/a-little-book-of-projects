@@ -24,7 +24,7 @@ export function AboutPage() {
                 <h3>Milestone</h3>
                 <ul>
                     <li>
-                        <span>Graduated from university with a degree in Law (Hons) and Accounting</span>
+                        <span>Graduated from university in Law (Hons) and Accounting</span>
                         <span className="dotted-line"></span>
                         <span>2020</span>
                     </li>
@@ -49,7 +49,7 @@ export function AboutPage() {
                         <span>2025</span>
                     </li>
                     <li>
-                        <span>Submitted my first web extension to FireFox and Chrome (status: pending)</span>
+                        <span>Submitted my first web extension (status: pending)</span>
                         <span className="dotted-line"></span>
                         <span>2025</span>
                     </li>

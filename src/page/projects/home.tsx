@@ -21,7 +21,7 @@ export function ProjectHome({
                 <li onClick={() => setPage('web-extension')}>
                     <span>Reffy Web Extension</span>
                     <span className="dotted-line"></span>
-                    <span className='cormorant-garamond'>Ease the chore of image reference collection from the web. A must-have for the artists out there.</span>
+                    <span className='cormorant-garamond'>Ease the chore of image reference collection from the web. A must-have for the artists.</span>
                 </li>
                 <li onClick={() => setPage('pixel')}>
                     <span>Pixel Lobster</span>
