@@ -1,23 +1,14 @@
-import { Link } from "@tanstack/react-router";
+import { NavBar } from "../components/navbar";
+
+const options = [
+    { target: '/experience', label: 'Experience' },
+    { target: '/posts', label: 'Posts' },
+]
 
 export function HomePage() {
     return (
         <>
-            <nav className='flex flex-col items-center justify-center gap-2 py-4 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-full lg:flex-row lg:justify-between lg:py-4 max-w-7xl mx-auto'>
-                <div className="dmr-font text-center">A Little Book of Projects</div>
-                <ul className='flex flex-row gap-16 mt-2 lg:mt-0 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-row lg:gap-4 lg:justify-between lg:py-4'>
-                    <li className='transform transition-transform duration-200 ease-in-out hover:underline'>
-                        <Link to='/experience'>
-                            Experience
-                        </Link>
-                    </li>
-                    <li className='transform transition-transform duration-200 ease-in-out hover:underline'>
-                        <Link to='/posts'>
-                            Posts
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            <NavBar options={options} />
             <main
                 className='pt-8 mx-auto max-w-7xl'
             >

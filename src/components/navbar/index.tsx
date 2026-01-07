@@ -1,5 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import type { NavigationOption } from "./install";
+
+interface NavigationOption {
+    target: string;
+    label: string;
+}
 
 interface NavBarProps {
     options: NavigationOption[]
@@ -7,27 +11,19 @@ interface NavBarProps {
 
 export function NavBar({options}: NavBarProps) {
     return (
-        <nav
-            className="p-4 pl-8 flex flex-col gap-4 text-[22px] nav fixed left-0 bg-red-200 min-h-screen w-100"
-        >
-            <Link
-                to='/'
-            >
-                A Little Book of Projects
-            </Link>
-            {
-                options.map((option) => 
-                    <Link
-                        to={option.routePath}
-                        activeProps={{
-                            className: 'font-bold',
-                        }}
-                        activeOptions={{ exact: true }}
-                    >
-                        {option.displayText}
-                    </Link>
-                )
-            }
+        <nav className='flex flex-col items-center justify-center gap-2 py-4 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-full lg:flex-row lg:justify-between lg:py-4 max-w-7xl mx-auto'>
+            <div className="dmr-font text-center">A Little Book of Projects</div>
+            <ul className='flex flex-row gap-16 mt-2 lg:mt-0 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-row lg:gap-4 lg:justify-between lg:py-4'>
+                {
+                    options.map((option) => 
+                        <li className='transform transition-transform duration-200 ease-in-out hover:underline'>
+                            <Link to={option.target}>
+                                {option.label}
+                            </Link>
+                        </li>
+                    )
+                }
+            </ul>
         </nav>
     )
 }
