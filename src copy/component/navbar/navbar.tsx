@@ -20,6 +20,7 @@ export function Navbar({
     page,
 }: NavbarProps) {
     const [containerWidth, setContainerWidth] = useState(0);
+    const [open, setIsOpen] = useState(false);
 
     const projectContainerRef = useRef<HTMLDivElement | null>(null);
     
@@ -60,7 +61,7 @@ export function Navbar({
 
     return (
         <aside>
-            <ul>
+            <ul className={open ? 'mobile-open' : ''}>
                 <button 
                     className="nav-button"
                     onClick={() => {
@@ -120,6 +121,9 @@ export function Navbar({
                     Contact.
                 </button>
             </ul>
+            <button className='toggle' onClick={() => setIsOpen(!open)}>
+                Open Panel
+            </button>
         </aside>
     )
 }

@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "DepartureMonoRegular";
-  src: url("assets/fonts/DepartureMono-Regular.otf") format("opentype");
-}
-
-.dmr-font {
-  font-family: "DepartureMonoRegular", Arial, sans-serif;
+  font-family: "AdvercaseFont";
+  src: url("assets/fonts/AdvercaseFont-Regular.otf") format("opentype");
+  font-weight: 100;
+  font-style: light;
+  font-display: swap;
 }
 
 body {
@@ -39,10 +38,6 @@ body {
   height: 100vh;
   padding: 0 10rem;
   box-sizing: border-box;
-}
-
-.nav {
-  font-family: "DepartureMonoRegular", Arial, sans-serif;
 }
 
 main {
