@@ -75,7 +75,6 @@ aside {
     border-radius: 1rem;
     cursor: pointer;
     border: 1px solid black;
-    font-family: "AdvercaseFont", Arial, sans-serif;
     font-style: italic;
     font-size: x-large;
     transition: all ease-in 0.1s;
@@ -113,7 +112,6 @@ aside {
 }
 
 #projects span {
-  font-family: "AdvercaseFont", Arial, sans-serif;
   font-size: 0.9rem;
 }
 
